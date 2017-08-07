@@ -1,11 +1,16 @@
 package com.eirot.android.kotlin01
 
 
+import android.graphics.Color
+import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+
+
 
 class KotlinMainActivity : AppCompatActivity() {
     /*
@@ -18,9 +23,10 @@ class KotlinMainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        val text = findViewById<TextView>(R.id.text)
-        text.setOnClickListener { view ->  toastMessage("You clicked Hello Kotlin textview !")}
+        setContentView(R.layout.activity_kotlin_main)
+        var image = findViewById<ImageView>(R.id.image)
+        image.setOnClickListener { view ->  toastMessage("( ⊙o⊙ ) You clicked me !")}
+        //val text = findViewById<TextView>(R.id.text)
         Log.v(TAG, "a = $a b = $b a + b = ${sum(a, b)}")
         Log.v(TAG, sumLambda(5, 6).toString())
     }
